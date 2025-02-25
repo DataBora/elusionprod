@@ -16,7 +16,7 @@ async fn main() -> ElusionResult<()>{
     let scheduler = PipelineScheduler::new("5min", || async {
         
         dotenv().ok();
-
+        
         let data_dir = get_env_or_default("DATA_DIR", "/usr/src/app/data");
         let password = require_env_var("PASSWORD");
     
@@ -39,7 +39,7 @@ async fn main() -> ElusionResult<()>{
         ).await?;
     
         let df = CustomDataFrame::new(&json_path, "sales").await?;
-        
+
         let save_sales = df
             .select(["*"])
             .elusion("res").await?;
