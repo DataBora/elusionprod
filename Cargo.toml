@@ -1,0 +1,9 @@
+[package]
+name = "elusionlearning"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+elusion = "3.3.0"
+tokio = {version = "1.42.0", features = ["rt-multi-thread"]}
+dotenv = "0.15.0"

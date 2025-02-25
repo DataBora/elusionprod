@@ -1,0 +1,14 @@
+.env
+
+# Ignore build artifacts
+/target/
+
+# Ignore temporary files
+/tmp/
+
+# Cargo lock file
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  elusionlearning:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/usr/src/app/data
+    env_file:
+      - .env
+    environment:
+      - DATA_DIR=/usr/src/app/data
